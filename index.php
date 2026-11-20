@@ -6,19 +6,24 @@ require('./PropertyConstan.php');
 use PBO\Marketplase\produk;
 
 //object
-$produk = new produk('P0001', 'Laptop', 10000000, 5);
+$produk = new produk();
+
+$produk->setKode('p0001')
+       ->setNama('Laptop')
+       ->setHarga(10000000)
+       ->setStok(5);
 
 //hasil
-echo "produk: ". $produk->nama;
+echo "produk: ". $produk->getNama();
 echo "<br/>";
 
-echo "harga: Rp. ". $produk->harga;
+echo "harga: Rp. ". $produk->getHarga();
 echo "<br/>";
 
-echo "stok: ". $produk->stok;
+echo "stok: ". $produk->getStok();
 echo "<br/>";
 
-echo "pajak: ". $produk->PAJAK() ."%";
+echo "pajak: ". $produk->pajak() ."%";
 echo "<br/>";
 echo "<br/>";
 echo "Total harga setelah pajak: Rp. ". $produk->total();
