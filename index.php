@@ -3,7 +3,7 @@
 //panggil file propertyconstant
 require('./PropertyConstan.php');
 
-use PBO\Marketplase\produk;
+use PBO\Marketplace\produk;
 
 //object
 $produk = new produk();
